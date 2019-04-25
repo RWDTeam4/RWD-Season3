@@ -1,0 +1,1 @@
+rosbuild_add_executable(rc right_controller.cpp)
