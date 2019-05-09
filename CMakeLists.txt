@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rwd)
+project(rwd-season3)
 
 find_package(Boost REQUIRED COMPONENTS date_time thread)
 find_package(catkin REQUIRED COMPONENTS message_filters message_generation rostime roscpp rosconsole roscpp_serialization)
@@ -27,6 +27,8 @@ endmacro()
 
 foreach(dir
     robot_controller
+    left_controller
+    right_controller
     )
   rostutorial(${dir})
 endforeach()
