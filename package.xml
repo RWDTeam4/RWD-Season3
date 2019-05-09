@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-	<name>RWD-Season3</name>
+	<name>rwd-season3</name>
 	<version>1.0.0</version>
 	<description>
 		Team 4 Blacked Out Buick robot code for a Raspberry Pi and ROS based communication
