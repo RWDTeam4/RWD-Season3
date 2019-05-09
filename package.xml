@@ -5,6 +5,7 @@
 	<description>
 		Team 4 Blacked Out Buick robot code for a Raspberry Pi and ROS based communication
 	</description>
+	<maintainer email="underpenalty@gmail.com">Under Penalty</maintainer>
 	<license>BSD</license>
 	<buildtool_depend>catkin</buildtool_depend>
 
