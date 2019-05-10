@@ -8,7 +8,7 @@
 #include <message_filters/time_synchronizer.h>
 #include <message_filters/sync_policies/approximate_time.h>
 #include <wiringPi.h>
-#include "rwd/Speed.h"
+#include "../Speed.h"
 
 #include <boost/thread.hpp>
 #include <pthread.h>

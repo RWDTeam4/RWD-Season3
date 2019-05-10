@@ -6,4 +6,6 @@ class Speed {
   public:
   
     int speed;
-}
+};
+
+#endif
