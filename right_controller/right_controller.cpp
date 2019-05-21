@@ -197,7 +197,7 @@ inline static void motors_init()
 	disableMotor(motor2enPin);
 }
 
-void rightCallback(const rwd::Speed::ConstPtr& motor1, const rwd::Speed::ConstPtr& motor2)
+void rightCallback(const Speed::ConstPtr& motor1, const Speed::ConstPtr& motor2)
 {
 	//ROS_INFO_STREAM("rightCallback speed1: [" << motor1->speed << "] [thread=" << boost::this_thread::get_id() << "]");
 	//pthread_mutex_lock(&time_lock);
@@ -238,10 +238,10 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::Timer stop_timer = n.createTimer(ros::Duration(0.3), stop_timer_cb);
 
-  message_filters::Subscriber<rwd::Speed> lf_sub(n, "RFSpeed", 10);
-  message_filters::Subscriber<rwd::Speed> lr_sub(n, "RRSpeed", 10);
+  message_filters::Subscriber<Speed> lf_sub(n, "RFSpeed", 10);
+  message_filters::Subscriber<Speed> lr_sub(n, "RRSpeed", 10);
 
-  typedef message_filters::sync_policies::ApproximateTime<rwd::Speed, rwd::Speed> MySyncPolicy;
+  typedef message_filters::sync_policies::ApproximateTime<Speed, Speed> MySyncPolicy;
 
   message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), lf_sub, lr_sub);
   sync.registerCallback(boost::bind(rightCallback, _1, _2));
